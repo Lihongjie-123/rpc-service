@@ -1,0 +1,15 @@
+syntax = "proto3";
+package grpcServer;
+service Greeter {
+    rpc GetContent (Request) returns (Return) {}
+}
+
+message Request {
+    string content = 1;
+    int32 code=2;
+}
+
+message Return {
+    string message = 1;
+    int32 code=2;
+}
